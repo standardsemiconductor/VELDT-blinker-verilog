@@ -7,7 +7,7 @@ blinker.asc: blinker.json blinker.pcf
 	nextpnr-ice40 --up5k --package sg48 --pcf blinker.pcf --asc blinker.asc --json blinker.json
 
 blinker.json: blinker.v
-	yosys -q -p "synth_ice40 -top top -json blinker.json -dsp -abc2" blinker.v
+	yosys -q -p "synth_ice40 -top top -json blinker.json -abc2" blinker.v
 
 prog: blinker.bin
 	iceprog blinker.bin
